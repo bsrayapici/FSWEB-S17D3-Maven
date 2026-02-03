@@ -140,8 +140,7 @@ class MainTest {
         long now = System.currentTimeMillis();
 
 
-        ZooErrorResponse errorResponse = new ZooErrorResponse(404, "Not Found", now);
-
+        ZooErrorResponse errorResponse = new ZooErrorResponse("Not Found", 404, now);
 
         assertEquals(404, errorResponse.getStatus());
         assertEquals("Not Found", errorResponse.getMessage());
